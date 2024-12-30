@@ -1,26 +1,48 @@
 \chapter{A linguagem da Teoria dos Conjuntos}
 
-\subsection*{Exerc�cio 1}
+\begin{exercicio}
+	Usando a linguagem de primeira ordem da teoria de conjuntos, escreva fórmulas para representar as seguintes frases.
+\end{exercicio}
 
+\begin{solucao}
 \begin{enumerate}
-	\item[a)] $\neg \exists x \forall y (y \in x) \equiv \forall x \exists y (y \notin x)$
-	\item[b)] $\exists ! x \forall y (y \notin x)$
-	\item[c)] $\exists ! y (y \in x)$
-	\item[d)] $\exists x \forall y ((y \in x) \rightarrow y = \phi)$
-	\item[e)] $r \text{ � subconjunto de } x \equiv \forall a ((a \in r) \rightarrow (a \in x)) \equiv A$, ent�o podemos escrever $\forall w ([A]_r^w \leftrightarrow w \in y)$
+	\item[a)] Não existe o conjunto de todos os conjuntos.
+    \item[] $\neg \exists x \forall y (y \in x) \equiv \forall x \exists y (y \notin x)$
+	\item[b)] Existe um único conjunto vazio.
+    \item[] $\exists ! x \forall y (y \notin x)$
+	\item[c)] x é um conjunto unitário
+    \item[] $\exists ! y (y \in x)$
+	\item[d)] Existe um conjunto que tem como elemento apenas o conjunto vazio
+    \item[] $\exists x \forall y ((y \in x) \leftrightarrow y = \phi)$
+	\item[e)] y é o conjunto dos subconjuntos de x 
+    \item[] $r \text{ é subconjunto de } x \equiv \forall a ((a \in r) \rightarrow (a \in x)) = A_r$, então podemos escrever $\exists y \forall w ([A]_r^w \leftrightarrow w \in y)$
+    
 \end{enumerate}
 
-\subsection*{Exerc�cio 2}
+\end{solucao}
+
+\begin{exercicio}
+	Marque as ocorrências de variáveis livres nas fórmulas abaixo
+\end{exercicio}
 
 \begin{enumerate}
-	\item[a)] $y$
-	\item[b)] $y$
-	\item[c)] $x$
-	\item[d)] N�o h� vari�veis livres.
-	\item[e)] $x$ e $y$
+	\item[a)] $(\forall x (x=y)) \rightarrow (x \in y ) $
+    \item[] $x$ e $y$
+	\item[b)] $ \forall x ((x=y) \rightarrow (x \in y))$
+    \item[] $y$
+	\item[c)] $\forall x(x=x) \rightarrow (\forall y \exists Z ((x=y) \land (y=z)) \rightarrow \neg(x\in y))$
+    \item[] $x$
+	\item[d)] $ \forall x \exists y(\neg(x=y) \land \forall z ((x \in y) \leftrightarrow \forall w ((w \in z ) \rightarrow (w \in x )))) $
+    \item[] Não há variáveis livres.
+	\item[e)] $(x=y)\rightarrow \exists (x=y) $
+    \item[] $x$ e $y$
 \end{enumerate}
 
-\subsection*{Exerc�cio 3}
+\begin{exercicio}
+	Escreva as subfórmulas de cada fórmula do exercício 2.
+\end{exercicio}
+
+\begin{solucao}
 
 \begin{enumerate}
 	\item 
@@ -60,3 +82,5 @@
 		\item $(x = y)$
 	\end{enumerate}
 \end{enumerate}
+
+\end{solucao}
